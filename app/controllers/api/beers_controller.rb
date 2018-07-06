@@ -2,6 +2,11 @@ class Api::BeersController < ApplicationController
   # brewery_db.beers.all
   # brewery_db.beers.all(name: 'Coors Light')
   # brewery_db.beers.random
+ 
+  def token
+    render json: ENV['BREWERYDB_API_KEY']
+  end
+
 
   def all
     send_response(brew_client.beers.all(p: @page))
