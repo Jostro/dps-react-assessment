@@ -3,6 +3,7 @@ import { Header, Segment, Divider, Grid, Image } from 'semantic-ui-react';
 import ReactMarkDown from 'react-markdown';
 import axios from 'axios';
 import dpsLogo from '../images/dpsLogo.svg';
+import Beers from './Beers';
 
 class Home extends Component {
   state = { assignmentMarkdown: '' };
@@ -52,6 +53,7 @@ class Home extends Component {
                 frameBorder={0}
                 src='http://localhost:3001/rails/info/routes'
               />
+          
             </Segment>
           </Grid.Column>
         </Grid>

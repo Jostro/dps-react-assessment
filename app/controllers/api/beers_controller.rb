@@ -7,6 +7,14 @@ class Api::BeersController < ApplicationController
     render json: ENV['BREWERYDB_API_KEY']
   end
 
+  def index
+    result = brewery_db.entries(
+      :id => params[:id],
+      :name => params[:name],
+      :description => params[:description],
+    )
+
+  end
 
   def all
     send_response(brew_client.beers.all(p: @page))

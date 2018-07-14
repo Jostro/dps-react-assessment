@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
     # Beers
-    get 'all_beers', to: 'beers#all'
-    get 'beer/:name', to: 'beers#by_name'
-    get 'random_beer', to: 'beers#random'
+    get 'api/all_beers', to: 'beers#all'
+    get 'api/beer/:name', to: 'beers#by_name'
+    get 'api/random_beer', to: 'beers#random'
 
     # Breweries
     get 'all_breweries', to: 'breweries#all'
